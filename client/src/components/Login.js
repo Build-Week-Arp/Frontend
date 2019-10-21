@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LInk } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import axiosWithAuth from '../utils/axiosWithAuth';
 
@@ -45,18 +45,24 @@ const Login = (props) => {
                 <p>Don't have an account? <Link to="/create-account">Create Account</Link></p>
             </div>
             <form>
-                <input 
-                    type="text" 
-                    name="email"
-                    value={credentials.email}
-                    onChange={handleChange}
-                />
-                <input 
-                    type="password" 
-                    name="password"
-                    value={credentials.password}
-                    onChange={handleChange}
-                />
+                <label>
+                    Email Address
+                    <input 
+                        type="text" 
+                        name="email"
+                        value={credentials.email}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Password
+                    <input 
+                        type="password" 
+                        name="password"
+                        value={credentials.password}
+                        onChange={handleChange}
+                    />
+                </label>
             </form>
             <div>
                 <button>Go Back</button>
@@ -65,3 +71,5 @@ const Login = (props) => {
         </div>
     )
 }
+
+export default Login;
