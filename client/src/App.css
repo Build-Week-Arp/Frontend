@@ -20,23 +20,62 @@
 .App-link {
 	color: #09d3ac;
 }
+
 .case-nav {
 	display: flex;
 	justify-content: center;
+	margin: 50px 0;
 }
 
 .case-a {
-	margin-left: 5%;
+	margin-left: 40px;
+	color: #091db7;
+	text-decoration: underline;
 }
 
 .case-btn-container {
 	margin-right: 25px;
 }
 
-.case-btn {
-	margin-left: ;
+.middle-link {
+	display: flex;
+	width: 25%;
 }
 
 .case-view-btn {
 	margin-left: 100px;
+}
+
+.case-btn-1 {
+	margin-right: 25px;
+	padding: 8px 20px;
+	border-radius: 25px;
+	background: #d50071;
+	color: #fff;
+}
+
+.case-btn-2 {
+	margin-right: 25px;
+	padding: 8px 20px;
+	border-radius: 25px;
+	background: #fff;
+	color: #04082b;
+	border-color: #04082b;
+}
+
+.extra.content {
+	display: flex;
+}
+
+.heart-icon {
+	margin-right: 25px;
+}
+
+.eye-icon {
+	margin-right: 55%;
+}
+
+.ui.five.cards > .ui.card {
+	width: 325px;
+	margin: 0 auto;
 }
