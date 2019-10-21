@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 import axiosWithAuth from '../utils/axiosWithAuth';
 
+/*
+* This component lets user login.  If successful redirects to Profile Page.
+* If user needs to create an account, will redirect to CreateAccount component
+*/
 const Login = (props) => {
     // state to manage user input for credentials
     const [ credentials, setCredentials ] = useState(
@@ -31,6 +35,7 @@ const Login = (props) => {
         axiosWithAuth()
             .post(`/api/login`, credentials)
             .then( res => {
+                /********THIS NEEDS TO BE UPDATED********/
                 localStorage.setItem('token', res.data.payload);
                 props.history.push(`/profile-page`);
             })
