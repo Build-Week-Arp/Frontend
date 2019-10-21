@@ -6,14 +6,28 @@ const SocialIcons = styled.div`
   text-align: center;
 `;
 
+const ImageContainer = styled.div`
+  height: 100px;
+  background: transparent;
+  disp
+`;
+
 const BioCard = () => (
   <Card>
-    
+    <ImageContainer>
       <Image
-        src="https://react.semantic-ui.com/images/avatar/small/matthew.png"
-        wrapped
-        ui={false}
+        src="https://media.licdn.com/dms/image/C4D03AQGEyqn3rIlCRw/profile-displayphoto-shrink_200_200/0?e=1577318400&v=beta&t=zxpYoLRTOpEFal2OLx1lVshjXP5Tc2txps2DVGOXmFg"
+        avatar
       />
+
+      <p>Leighton Fritze</p>
+      <small>Full Stack Developer</small>
+      <div className="followers">
+        <small>Followers 317 </small> 
+        <small>Following 8</small>
+      </div>
+    </ImageContainer>
+
     <Card.Content>
       <button className="ui button">Follow</button>
       <Card.Header>About Me</Card.Header>
@@ -57,3 +71,8 @@ const BioCard = () => (
 );
 
 export default BioCard;
+
+// facebook official
+//linkedin
+//twitter square
+// mail
