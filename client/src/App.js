@@ -5,7 +5,7 @@ import Login from './components/Login';
 import CreateAccount from './components/CreateAccount';
 import PrivateRoute from './utils/PrivateRoute';
 import ProfilePage from './components/ProfilePage';
-
+import BioCard from './components/Bio';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Route path="/create-account" component={CreateAccount}/>
       {/***Make The Routes Below Private***/}
       <Route path="/profile=page" component={ProfilePage} />
+      <Route path="/bio" component={BioCard} />
       
     </Router>
   );

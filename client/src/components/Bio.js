@@ -10,8 +10,7 @@ const BioCard = () => (
   <Card>
     
       <Image
-        
-        src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+        src="https://react.semantic-ui.com/images/avatar/small/matthew.png"
         wrapped
         ui={false}
       />
