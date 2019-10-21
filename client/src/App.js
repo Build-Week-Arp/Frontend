@@ -15,6 +15,6 @@ function App() {
       <Route path="/profile=page" component={ProfilePage} />
     </Router>
   );
-
+  }
 
 export default App;
