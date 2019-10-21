@@ -6,6 +6,7 @@ import CreateAccount from './components/CreateAccount';
 import PrivateRoute from './utils/PrivateRoute';
 import ProfilePage from './components/ProfilePage';
 
+
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/create-account" component={CreateAccount}/>
       {/***Make The Routes Below Private***/}
       <Route path="/profile=page" component={ProfilePage} />
+      
     </Router>
   );
   }
