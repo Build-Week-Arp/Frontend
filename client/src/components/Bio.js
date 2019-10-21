@@ -2,17 +2,23 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import styled from "styled-components";
 
+const BioCardContainer = styled.section`
+position: absolute;
+left: 0%;
+`;
+
+const ImageContainer = styled.div`
+ 
+height: 214px;
+width: 100%;
+`;
+
 const SocialIcons = styled.div`
   text-align: center;
 `;
 
-const ImageContainer = styled.div`
-  height: 100px;
-  background: transparent;
-  disp
-`;
-
 const BioCard = () => (
+  <BioCardContainer className = 'bio-card'>
   <Card>
     <ImageContainer>
       <Image
@@ -68,6 +74,7 @@ const BioCard = () => (
       </SocialIcons>
     </Card.Content>
   </Card>
+  </BioCardContainer>
 );
 
 export default BioCard;
