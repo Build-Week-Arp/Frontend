@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import axiosWithAuth from '../utils/axiosWithAuth';
 
 import {
     LoginWrapper, LoginCard, StyledLink, LoginTitle,
-    LoginSubtitle
+    LoginSubtitle, LoginForm, InputLabel, LoginInput,
+    Logo, ButtonBox, LoginButton
 } from '../styling/LoginStyling';
-import axiosWithAuth from '../utils/axiosWithAuth';
 
 /*
 * This component lets user login.  If successful redirects to Profile Page.
@@ -49,36 +50,33 @@ const Login = (props) => {
     // render form to handle login input
     return (
         <LoginWrapper>
+            <Logo>AR<br/>P.</Logo>
             <LoginCard>
                 <LoginTitle>Sign In</LoginTitle>
                 <LoginSubtitle>
                     Don't have an account?
                     <StyledLink to="/create-account">  Create Account</StyledLink>
                 </LoginSubtitle>
-                <form>
-                    <label>
-                        Email Address
-                        <input 
-                            type="text" 
-                            name="email"
-                            value={credentials.email}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Password
-                        <input 
-                            type="password" 
-                            name="password"
-                            value={credentials.password}
-                            onChange={handleChange}
-                        />
-                    </label>
-                </form>
-                <div>
-                    <button>Go Back</button>
-                    <button>Sign In</button>
-                </div>
+                <LoginForm>
+                    <InputLabel>Email Address</InputLabel>
+                    <LoginInput 
+                        type="text" 
+                        name="email"
+                        value={credentials.email}
+                        onChange={handleChange}
+                    />
+                    <InputLabel>Password</InputLabel>
+                    <LoginInput 
+                        type="password" 
+                        name="password"
+                        value={credentials.password}
+                        onChange={handleChange}
+                    />
+                </LoginForm>
+                <ButtonBox>
+                    <LoginButton>Go Back</LoginButton>
+                    <LoginButton>Sign In</LoginButton>
+                </ButtonBox>
             </LoginCard>
         </LoginWrapper>
     )
