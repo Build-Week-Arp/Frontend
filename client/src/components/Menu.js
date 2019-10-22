@@ -1,5 +1,5 @@
-import React from 'react'
 import { Dropdown, Menu } from 'semantic-ui-react'
+import React from 'react';
 
 const options = [
   { key: 1, text: 'Profile', value: 1 },
