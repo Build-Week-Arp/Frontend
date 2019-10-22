@@ -6,6 +6,7 @@ import CreateAccount from './components/CreateAccount';
 import PrivateRoute from './utils/PrivateRoute';
 import ProfilePage from './components/ProfilePage';
 import BioCard from './components/Bio';
+import "./App.css";
 
 function App() {
   return (
