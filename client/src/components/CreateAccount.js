@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 
 import axiosWithAuth from '../utils/axiosWithAuth';
 
+import {
+    LoginWrapper, LoginCard, StyledLink, LoginTitle,
+    LoginSubtitle, LoginForm, InputLabel, LoginInput,
+    Logo, ButtonBox, LoginButton
+} from '../styling/LoginStyling';
+
 const CreateAccount = (props) => {
     // state to handle new user infor
     const [ newUser, setNewUser ] = useState(
@@ -40,50 +46,46 @@ const CreateAccount = (props) => {
 
     // render form to let user create a new account
     return (
-        <div>
-            <div>
-                <h1>Create an Account</h1>
-            </div>
-            <form>
-                <label>
-                    Email Address
-                    <input 
+        <LoginWrapper>
+            <Logo>AR<br/>P.</Logo>
+            <LoginCard>
+                <LoginTitle>Create an Account</LoginTitle>
+                <LoginForm>
+                    <InputLabel>Email Address</InputLabel>
+                    <LoginInput 
                         type="text" 
                         name="email"
                         value={newUser.email}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    First Name
-                    <input 
+                    <InputLabel>First Name</InputLabel>
+                    <LoginInput 
                         type="text" 
                         name="firstName"
-                        value={newUser.email}
+                        value={newUser.firstName}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Last Name
-                    <input 
+                    <InputLabel>Last Name</InputLabel>
+                    <LoginInput 
                         type="text" 
                         name="lastName"
-                        value={newUser.email}
+                        value={newUser.lastName}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Password
-                    <input 
+                    <InputLabel>Password</InputLabel>
+                    <LoginInput 
                         type="password" 
                         name="password"
                         value={newUser.password}
                         onChange={handleChange}
                     />
-                </label>
-                <button>Create Account</button>
-            </form>
-        </div>
+                </LoginForm>
+                <ButtonBox>
+                    <LoginButton>Go Back</LoginButton>
+                    <LoginButton>Create Account</LoginButton>
+                </ButtonBox>
+            </LoginCard>
+        </LoginWrapper>
     )
 }
 
