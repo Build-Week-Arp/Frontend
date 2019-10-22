@@ -4,6 +4,9 @@ import {
     FETCH_FAIL
 } from '../actions';
 
+import caseStudyImg1 from '../images/caseStudyImg1.jpg';
+import caseStudyImg2 from '../images/caseStudyImg2.png';
+
 const initialState = {
     isFetching: false,
     isPosting: false,
@@ -23,14 +26,14 @@ const initialState = {
                 {
                     title: "Abstract",
                     description: "description",
-                    imgURL: "http://url",
+                    imgURL: caseStudyImg1,
                     likes: 94,
                     views: 1784
                 },
                 {
                     title: "Woman",
                     description: "description",
-                    imgURL: "http://url",
+                    imgURL: caseStudyImg2,
                     likes: 94,
                     views: 1784
                 } 
