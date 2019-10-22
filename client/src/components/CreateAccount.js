@@ -29,7 +29,7 @@ const CreateAccount = (props) => {
         // will retrieve JWT token and add to local storage
         // route to protected ProfilePage component
         axiosWithAuth()
-            .post(`api/create`, newUser)
+            .post(`register`, newUser)
             .then( res => {
                 /********THIS NEEDS TO BE UPDATED********/
                 // update state with payload

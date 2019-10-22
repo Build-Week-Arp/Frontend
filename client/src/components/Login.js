@@ -33,7 +33,7 @@ const Login = (props) => {
         // add the token to local storage
         // route to protected ProfilePage Component
         axiosWithAuth()
-            .post(`/api/login`, credentials)
+            .post(`/login`, credentials)
             .then( res => {
                 /********THIS NEEDS TO BE UPDATED********/
                 localStorage.setItem('token', res.data.payload);

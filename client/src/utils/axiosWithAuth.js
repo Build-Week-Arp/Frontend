@@ -7,7 +7,7 @@ const axiosWithAuth = () => {
     // return an instance of axios
     return axios.create({
         // *******BASEURL AND HEADERS NEED TO BE REPLACED*******
-        baseURL: 'http://localhost:5000',
+        baseURL: 'http://localhost:3200',
         headers: {
             authorization: token
         }
