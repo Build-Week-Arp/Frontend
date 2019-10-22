@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import {
+    LoginWrapper, LoginCard, StyledLink, LoginTitle,
+    LoginSubtitle
+} from '../styling/LoginStyling';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 /*
@@ -44,36 +48,39 @@ const Login = (props) => {
 
     // render form to handle login input
     return (
-        <div>
-            <div>
-                <h1>Sign In</h1>
-                <p>Don't have an account? <Link to="/create-account">Create Account</Link></p>
-            </div>
-            <form>
-                <label>
-                    Email Address
-                    <input 
-                        type="text" 
-                        name="email"
-                        value={credentials.email}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Password
-                    <input 
-                        type="password" 
-                        name="password"
-                        value={credentials.password}
-                        onChange={handleChange}
-                    />
-                </label>
-            </form>
-            <div>
-                <button>Go Back</button>
-                <button>Sign In</button>
-            </div>
-        </div>
+        <LoginWrapper>
+            <LoginCard>
+                <LoginTitle>Sign In</LoginTitle>
+                <LoginSubtitle>
+                    Don't have an account?
+                    <StyledLink to="/create-account">  Create Account</StyledLink>
+                </LoginSubtitle>
+                <form>
+                    <label>
+                        Email Address
+                        <input 
+                            type="text" 
+                            name="email"
+                            value={credentials.email}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Password
+                        <input 
+                            type="password" 
+                            name="password"
+                            value={credentials.password}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </form>
+                <div>
+                    <button>Go Back</button>
+                    <button>Sign In</button>
+                </div>
+            </LoginCard>
+        </LoginWrapper>
     )
 }
 
