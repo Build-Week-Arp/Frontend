@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import CaseStudiesList from './components/CaseStudiesList';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
 	return (
 		<div className="App">
-			<CaseStudiesList />
+			<ProfilePage />
 		</div>
 	);
 }
