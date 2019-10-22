@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Icon, Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -27,9 +27,9 @@ const CaseStudiesList = ({ data }) => {
 					<a href="#">View All </a>
 				</span>
 			</nav>
+
 			<Card.Group itemsPerRow={5}>
 				{data.caseStudies.map((img) => {
-					console.log(img);
 					return (
 						<Card>
 							<Image src={img.imgURL} wrapped ui={false} />

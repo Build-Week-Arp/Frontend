@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CaseStudiesList from './CaseStudiesList';
+import axios from 'axios';
+import { useAxios } from '../hooks/useAxios.js';
 
 const ProfilePage = () => {
+	// ? future custom api call
+	// const [ data, setData ] = useAxios({});
+
 	const [ data, setData ] = useState({
 		caseStudies: [
 			{
