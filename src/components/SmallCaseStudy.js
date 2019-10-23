@@ -1,12 +1,18 @@
 import React, {useState} from 'react';
 
-const SmallCaseStudy = ( data, setData ) useState => {
-        return 
-            <Container>
-                <Image src={data.imgURL}/>
-                <h2>author</h2>
+const SmallCaseStudy = ({data}) => {
+
+        return (
+            <div>
+                <img>{data.imageURL}</img>
+                <h2>{data.title}</h2>
+                <h2>{data.author}</h2>
+                
                 <h2>{data.likes}</h2>
                 <h2>{data.views}</h2>
-            </Container>
-}
+                <button>Edit</button>
+            </div>
+        )
+    }
+
 export default SmallCaseStudy;
