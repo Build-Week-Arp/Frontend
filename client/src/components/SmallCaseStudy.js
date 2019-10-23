@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 
 
-const SmallCaseStudy = ( )  => {
-const [data, setData ] = useState([]);
+const SmallCaseStudy = ({data}) => {
 
         return (
             <div>
-                {/* <Image src={data.imgURL}/> */}
-                <h2>{data.artist}</h2>
+                <img>{data.imageURL}</img>
+                <h2>{data.title}</h2>
+                <h2>{data.author}</h2>
+                
                 <h2>{data.likes}</h2>
                 <h2>{data.views}</h2>
                 <button>Edit</button>
