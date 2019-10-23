@@ -6,19 +6,14 @@ import { connect } from 'react-redux';
 import { fetchArtist } from '../actions';
 import CaseStudiesList from './CaseStudiesList';
 import BioCard from './Bio';
-import DropDownMenu from './Menu'
+import NavBar from './NavBar';
 
 const ProfilePage = (props) => {
 	return (
     <>
-		<nav>
-			<form className="profile-form">
-				<input type="search" placeholder="search..." />
-			</form>
-      <DropDownMenu />
-		</nav>
-    <BioCard />
-   {<CaseStudiesList data={props.artist} />}
+		<NavBar />
+		<BioCard />
+		{<CaseStudiesList data={props.artist} />}
    </>
 	);
 };
