@@ -15,7 +15,15 @@ const NavMenu = styled.nav`
 
 const Container = styled.div`
   width: 300px;
+  color: white;
 `;
+
+const IconContainer = styled.div`
+  color white;
+  font-size: 3rem;
+`;
+
+
 
 class DropDownMenu extends Component {
   constructor() {
@@ -52,10 +60,11 @@ class DropDownMenu extends Component {
     return (
       
         <Container>
-         
-        <FaUserCircle onClick={this.showMenu}>
+         <IconContainer>
+         <FaUserCircle onClick={this.showMenu}>
           Show menu
-        </FaUserCircle>
+        </FaUserCircle> 
+        </IconContainer>
        
         
         
