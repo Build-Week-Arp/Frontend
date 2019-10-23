@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
   width: 300px;
-  color: white;
+  
 `;
 
 const IconContainer = styled.div`
@@ -15,8 +15,7 @@ const IconContainer = styled.div`
 
 const NavMenu = styled.nav`
   text-align:center;
-  // display: flex;
-  // flex-direction: column;
+  
   width: 20%;
   background: #191512;
   color: white;

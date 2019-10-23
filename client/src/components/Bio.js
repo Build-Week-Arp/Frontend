@@ -51,10 +51,13 @@ background: #D12554;
 const MiddleParagraphs = styled.div`
   width: 252px;
   margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 10%;
 `;
 
 const BottomIcons = styled.div`
 margin: 20% auto;
+
 `;
 
 export default function BioCard() {
@@ -73,16 +76,19 @@ export default function BioCard() {
 
         <MiddleParagraphs className = 'middle-part'>
           <h3>About Me</h3>
+
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using </p>
+
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem</p>
+
         </MiddleParagraphs>
         <BottomIcons className = 'bottom-part'>
-        <FaFacebookSquare/>
-        <FaLinkedinIn />
-        <FaTwitterSquare />
-        <FaEnvelopeSquare />
+          <FaFacebookSquare/>
+          <FaLinkedinIn />
+          <FaTwitterSquare />
+          <FaEnvelopeSquare />
         </BottomIcons>
-        </MiddleDiv>
+      </MiddleDiv>
     </CardContainer>
   )
 }

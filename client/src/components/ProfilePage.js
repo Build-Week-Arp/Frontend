@@ -7,8 +7,7 @@ import { fetchArtist } from '../actions';
 import CaseStudiesList from './CaseStudiesList';
 import BioCard from './Bio';
 import NavBar from './NavBar';
-import LargeCaseStudy from './SmallCaseStudy';
-import SmallCaseStudy from './LargeCaseStudy';
+
 
 const ProfilePage = (props) => {
 	return (
