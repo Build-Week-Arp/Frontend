@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Icon, Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
+import UploadModal from './UploadModal';
 
 const CaseStudiesList = ({ data }) => {
 	const [ isUploading, setIsUploading ] = useState(false);
@@ -13,7 +14,7 @@ const CaseStudiesList = ({ data }) => {
 
 	if (isUploading) {
 		// todo going to make a modal component will will go here.
-		return <button onClick={handleClick} className="case-btn-1" />;
+		return <UploadModal />;
 	} else {
 		return (
 			<div>
