@@ -3,16 +3,6 @@ import styled from "styled-components";
 import { FaUserCircle } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
-
-
-const NavMenu = styled.nav`
-  text-align:center;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  background: #191512;
-`;
-
 const Container = styled.div`
   width: 300px;
   color: white;
@@ -23,7 +13,14 @@ const IconContainer = styled.div`
   font-size: 3rem;
 `;
 
-
+const NavMenu = styled.nav`
+  text-align:center;
+  // display: flex;
+  // flex-direction: column;
+  width: 20%;
+  background: #191512;
+  color: white;
+`;
 
 class DropDownMenu extends Component {
   constructor() {
@@ -65,9 +62,7 @@ class DropDownMenu extends Component {
           Show menu
         </FaUserCircle> 
         </IconContainer>
-       
-        
-        
+
         {
           this.state.showMenu
             ? (
