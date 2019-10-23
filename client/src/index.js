@@ -8,6 +8,8 @@ import logger from 'redux-logger';
 import './index.css';
 import App from './App';
 import reducer from './reducer';
+import SmallCaseStudy from './components/SmallCaseStudy';
+import LargeCaseStudy from './components/LargeCaseStudy';
 
 // create store
 const store = createStore(
