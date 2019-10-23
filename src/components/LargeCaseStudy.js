@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
+import { Card } from 'semantic-ui-react';
 
-const LargeCaseStudy = ( ) => {
-const [data, setData ] = useState([]);
+const LargeCaseStudy = ( {data} ) => {
+
 console.log(data)
+
         return (
+            <Card>
             <div >
                 {/* <Image src={data.imgURL}/> */}
                 <h1>{data.artist}</h1>
@@ -14,6 +17,7 @@ console.log(data)
                 <button>Cancel</button>
                 <button>Update Post</button>
             </div>
+            </Card>
         )
     }
 
