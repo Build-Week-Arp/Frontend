@@ -10,5 +10,5 @@
     "semantic-ui-react": "^0.88.1",
     "styled-components": "^4.4.0"
   },
-  "homepage": "/client"
+  "homepage": "./client"
 }
