@@ -3,16 +3,21 @@ import styled from "styled-components";
 import { FaUserCircle } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
+
+
 const NavMenu = styled.nav`
   text-align:center;
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 20%;
   background: #191512;
 `;
 
+const Container = styled.div`
+  width: 300px;
+`;
 
-class BioCard extends Component {
+class DropDownMenu extends Component {
   constructor() {
     super();
     
@@ -45,10 +50,14 @@ class BioCard extends Component {
 
   render() {
     return (
-      <div>
+      
+        <Container>
+         
         <FaUserCircle onClick={this.showMenu}>
           Show menu
         </FaUserCircle>
+       
+        
         
         {
           this.state.showMenu
@@ -72,11 +81,11 @@ class BioCard extends Component {
               null
             )
         }
-      </div>
+      </Container>
     );
   }
 }
 
-export default BioCard;
+export default DropDownMenu;
 
 
