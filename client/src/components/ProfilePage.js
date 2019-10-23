@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import CaseStudiesList from './CaseStudiesList';
 import axios from 'axios';
 import { useAxios } from '../hooks/useAxios.js';
+
+import CaseStudiesList from './CaseStudiesList';
+import BioCard from './Bio';
+import DropDownMenu from './Menu'
 
 const ProfilePage = () => {
 	// ? future custom api call
@@ -53,13 +56,18 @@ const ProfilePage = () => {
 	});
 
 	return (
+    <>
 		<nav>
 			<form className="profile-form">
 				<input type="search" placeholder="search..." />
 			</form>
-			<CaseStudiesList data={data} />
+      <DropDownMenu />
 		</nav>
+    <BioCard />
+    <CaseStudiesList data={data} />
+   </>
 	);
 };
+
 
 export default ProfilePage;
