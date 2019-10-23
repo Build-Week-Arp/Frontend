@@ -1,21 +1,22 @@
 import React, {useState} from 'react';
 
 
-const LargeCaseStudy = ( {data, setData} ) => {
-const [data setData ] = useState([
-
-]);
-
-        return {
-            <Container>
-                <Image src={data.imgURL}/>
+const LargeCaseStudy = ( ) => {
+const [data, setData ] = useState([]);
+console.log(data)
+        return (
+            <div >
+                {/* <Image src={data.imgURL}/> */}
                 <h1>{data.artist}</h1>
                 <h2>Artist</h2>
-                <Title><span/></Title>
+                <span/>
                 <h2>Description</h2>
-                <Description><span/></Description>
+                <p></p>><span/>
                 <button>Cancel</button>
                 <button>Update Post</button>
-            </Container>
-};
+            </div>
+        )
+    }
+
+
 export default LargeCaseStudy;
