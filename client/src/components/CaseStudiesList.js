@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Icon, Image } from 'semantic-ui-react';
-import 'semantic-ui-css/semantic.min.css';
+// import 'semantic-ui-css/semantic.min.css';
 import UploadModal from './UploadModal';
 
 const CaseStudiesList = ({ data }) => {

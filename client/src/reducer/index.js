@@ -36,6 +36,20 @@ const initialState = {
                     imgURL: caseStudyImg2,
                     likes: 94,
                     views: 1784
+                },
+                {
+                    title: "Abstract",
+                    description: "description",
+                    imgURL: caseStudyImg1,
+                    likes: 94,
+                    views: 1784
+                },
+                {
+                    title: "Woman",
+                    description: "description",
+                    imgURL: caseStudyImg2,
+                    likes: 94,
+                    views: 1784
                 } 
             ]
     }
@@ -62,6 +76,8 @@ const reducer = (state = initialState, action) => {
                 isFetching: false,
                 error: action.payload
             }
+        default:
+            return state;
     }
 }
 
