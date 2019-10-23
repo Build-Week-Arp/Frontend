@@ -12,7 +12,7 @@ const NavMenu = styled.nav`
 `;
 
 
-class BioCard extends Component {
+class DropDownMenu extends Component {
   constructor() {
     super();
     
@@ -77,6 +77,6 @@ class BioCard extends Component {
   }
 }
 
-export default BioCard;
+export default DropDownMenu;
 
 
