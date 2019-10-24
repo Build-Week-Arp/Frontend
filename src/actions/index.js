@@ -4,6 +4,7 @@ import axios from 'axios';
 export const START_FETCHING = "START_FETCHING";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
+export const UPDATE_CASE = "UPDATE_CASE";
 
 // action creator that fetches Artist object from API
 export const fetchArtist = () => dispatch => {
@@ -16,4 +17,13 @@ export const fetchArtist = () => dispatch => {
         .get('http://localhost:3333/case-studies')
         .then( res => dispatch({ type: FETCH_SUCCESS, payload: res.data}))
         .catch( err => dispatch({ type: FETCH_FAIL, payload: err}))
+}
+
+// action that passes updated case and id to UPDATE_CASE 
+// reducer case
+export const updateCaseStudy = ( caseStudy, id ) => dispatch => {
+    dispatch({ type: UPDATE_CASE, payload: {
+        caseStudy: caseStudy,
+        id: id
+    }})
 }

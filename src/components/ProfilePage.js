@@ -28,10 +28,9 @@ const ProfilePage = (props) => {
 		<>
 			<NavBar />
 			<ProfilePageContainer>
-					<BioCard />
-
+				<BioCard />
 				<CaseStudiesContainer>
-						<CaseStudiesList data={props.artist} />
+					<CaseStudiesList data={props.artist} />
 				</CaseStudiesContainer>
 
 			</ProfilePageContainer>
@@ -48,4 +47,6 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, { fetchArtist })(ProfilePage);
+export default connect(
+	mapStateToProps, 
+	{ fetchArtist })(ProfilePage);

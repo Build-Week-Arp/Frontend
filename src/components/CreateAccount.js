@@ -12,9 +12,7 @@ const CreateAccount = (props) => {
     // state to handle new user infor
     const [ newUser, setNewUser ] = useState(
         {
-            email: '',
-            firstName: '',
-            lastName: '',
+            username: '',
             password: ''
         }
     );
@@ -35,9 +33,9 @@ const CreateAccount = (props) => {
         // will retrieve JWT token and add to local storage
         // route to protected ProfilePage component
         axiosWithAuth()
-            .post(`register`, newUser)
+            .post(`/auth/register`, newUser)
             .then( res => {
-                /********THIS NEEDS TO BE UPDATED********/
+                console.log(res);
                 // update state with payload
                 props.history.push('/')
             })
@@ -51,25 +49,11 @@ const CreateAccount = (props) => {
             <LoginCard>
                 <LoginTitle>Create an Account</LoginTitle>
                 <LoginForm>
-                    <InputLabel>Email Address</InputLabel>
+                    <InputLabel>Username</InputLabel>
                     <LoginInput 
                         type="text" 
-                        name="email"
-                        value={newUser.email}
-                        onChange={handleChange}
-                    />
-                    <InputLabel>First Name</InputLabel>
-                    <LoginInput 
-                        type="text" 
-                        name="firstName"
-                        value={newUser.firstName}
-                        onChange={handleChange}
-                    />
-                    <InputLabel>Last Name</InputLabel>
-                    <LoginInput 
-                        type="text" 
-                        name="lastName"
-                        value={newUser.lastName}
+                        name="username"
+                        value={newUser.username}
                         onChange={handleChange}
                     />
                     <InputLabel>Password</InputLabel>
@@ -81,8 +65,8 @@ const CreateAccount = (props) => {
                     />
                 </LoginForm>
                 <ButtonBox>
-                    <LoginButton>Go Back</LoginButton>
-                    <LoginButton>Create Account</LoginButton>
+                    <LoginButton onClick={() => props.history.push('/')}>Go Back</LoginButton>
+                    <LoginButton onClick={createAccount}>Create Account</LoginButton>
                 </ButtonBox>
             </LoginCard>
         </LoginWrapper>

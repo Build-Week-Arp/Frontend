@@ -16,7 +16,7 @@ function App() {
 			<Route exact path="/" component={Login} />
 			<Route path="/create-account" component={CreateAccount} />
 			{/***Make The Routes Below Private***/}
-			<Route path="/profile-page" component={ProfilePage} />
+			<PrivateRoute exact path="/profile-page" component={ProfilePage} />
 		</Router>
 	);
 }

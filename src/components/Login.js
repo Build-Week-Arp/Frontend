@@ -16,7 +16,7 @@ const Login = (props) => {
     // state to manage user input for credentials
     const [ credentials, setCredentials ] = useState(
         {
-            email: '',
+            username: '',
             password: ''
         }
     )
@@ -38,9 +38,9 @@ const Login = (props) => {
         // add the token to local storage
         // route to protected ProfilePage Component
         axiosWithAuth()
-            .post(`/login`, credentials)
+            .post(`/auth/login`, credentials)
             .then( res => {
-                /********THIS NEEDS TO BE UPDATED********/
+                console.log(res);
                 localStorage.setItem('token', res.data.payload);
                 props.history.push(`/profile-page`);
             })
@@ -58,11 +58,11 @@ const Login = (props) => {
                     <StyledLink to="/create-account">  Create Account</StyledLink>
                 </LoginSubtitle>
                 <LoginForm>
-                    <InputLabel>Email Address</InputLabel>
+                    <InputLabel>Username</InputLabel>
                     <LoginInput 
                         type="text" 
-                        name="email"
-                        value={credentials.email}
+                        name="username"
+                        value={credentials.username}
                         onChange={handleChange}
                     />
                     <InputLabel>Password</InputLabel>
@@ -75,7 +75,7 @@ const Login = (props) => {
                 </LoginForm>
                 <ButtonBox>
                     <LoginButton>Go Back</LoginButton>
-                    <LoginButton>Sign In</LoginButton>
+                    <LoginButton onClick={submitLogin}>Sign In</LoginButton>
                 </ButtonBox>
             </LoginCard>
         </LoginWrapper>

@@ -6,8 +6,7 @@ const axiosWithAuth = () => {
 
     // return an instance of axios
     return axios.create({
-        // *******BASEURL AND HEADERS NEED TO BE REPLACED*******
-        baseURL: 'http://localhost:3200',
+        baseURL: 'https://art-po-bw.herokuapp.com',
         headers: {
             authorization: token
         }
