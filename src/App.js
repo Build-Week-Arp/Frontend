@@ -6,19 +6,22 @@ import CreateAccount from './components/CreateAccount';
 import PrivateRoute from './utils/PrivateRoute';
 import ProfilePage from './components/ProfilePage';
 import BioCard from './components/Bio';
-import "./App.css";
+import './App.css';
 
 function App() {
-  return (
-    <Router>
-      <Route exact path="/" component={Login}/>
-      <Route path="/create-account" component={CreateAccount}/>
-      {/***Make The Routes Below Private***/}
-      <Route path="/profile-page" component={ProfilePage} />
-      {/* <Route path="/bio" component={BioCard} /> */}
-      
-    </Router>
-  );
-  }
+	return (
+		<div>
+			<Router>
+				<Route exact path="/" component={Login} />
+				<Route path="/create-account" component={CreateAccount} />
+				{/***Make The Routes Below Private***/}
+				<Route path="/profile-page" component={ProfilePage} />
+				{/* <Route path="/bio" component={BioCard} /> */}
+			</Router>
+
+			<ProfilePage />
+		</div>
+	);
+}
 
 export default App;

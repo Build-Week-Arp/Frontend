@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const ModalDiv = styled.div`
 	height: 500px;
 	width: 900px;
-	background: lightYellow;
+	background: #fff;
 	margin: 125px auto 0;
 	border-radius: 5px;
 	display: flex;
@@ -28,9 +28,17 @@ const ModalChild = styled.div`
 const ModalH2 = styled.h2`
 	letter-spacing: 2px;
 	margin: 50px;
+	font-size: ;
+	text-align: center;
 `;
 
-const ModalButtonDiv = styled.div`text-align: right;`;
+const ModalButtonDiv = styled.div`
+	text-align: left;
+	font-size: 25px;
+	font-weight: 800;
+
+	${(props) => (props.className === 'modal-button' ? 'text-align: center;' : null)};
+`;
 
 const ModalButton = styled.button`
 	padding: 8px 30px;
@@ -71,13 +79,15 @@ const ModalFormInput = styled.input`
 	background: transparent;
 `;
 
-const UploadModal = () => {
+const UploadModal = ({ handleClick }) => {
 	return (
 		<div id="modal" className="upload-modal">
 			<ModalDiv>
 				<ModalChild className="child1">
-					<ModalH2>Upload</ModalH2>
-					<ModalButton className="btn-primary">Browse</ModalButton>
+					<ModalButtonDiv className="modal-button">
+						<ModalH2>Upload</ModalH2>
+						<ModalButton className="btn-primary">Browse</ModalButton>
+					</ModalButtonDiv>
 
 					<ModalForm>
 						<label>Title</label>
@@ -88,7 +98,9 @@ const UploadModal = () => {
 					</ModalForm>
 
 					<ModalButtonDiv>
-						<ModalButton className="btn-primary">Cancel</ModalButton>
+						<ModalButton onClick={handleClick} className="btn-primary">
+							Cancel
+						</ModalButton>
 						<ModalButton className="btn-secondary">Create Post</ModalButton>
 					</ModalButtonDiv>
 				</ModalChild>
