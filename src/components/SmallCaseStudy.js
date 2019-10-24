@@ -1,3 +1,14 @@
+import React, { useState } from "react";
+
+
+
+const SmallCaseStudy = (props) => {
+    console.log(props);
+}
+
+
+
+
 // import React, {useState} from 'react';
 
 // const SmallCaseStudy = ( data, setData ) useState => {
@@ -9,4 +20,6 @@
 //                 <h2>{data.views}</h2>
 //             </Container>
 // }
-// export default SmallCaseStudy;
+
+
+export default SmallCaseStudy;

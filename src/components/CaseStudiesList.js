@@ -44,32 +44,10 @@ const CaseStudiesList = ({ data }) => {
 				</nav>
 
 				<Card.Group itemsPerRow={5}>
-					{data.caseStudies.map((img) => {
+					{data.caseStudies.map((casestudy) => {
 						return (
-							<Card>
-								<Image src={img.imgURL} wrapped ui={false} />
-								<Card.Content>
-									<Card.Header>{img.title}</Card.Header>
-									<Card.Meta>
-										<span className="date">{img.author}</span>
-									</Card.Meta>
-								</Card.Content>
-
-								<Card.Content extra>
-									<span className="heart-icon">
-										<Icon name="heart" />
-										{img.likes}
-									</span>
-
-									<span className="eye-icon">
-										<Icon name="eye" />
-										{img.views}
-									</span>
-
-									<button>Edit</button>
-								</Card.Content>
-							</Card>
-						);
+							<SmallCaseStudy casestudy={casestudy} />
+						)
 					})}
 				</Card.Group>
 			</div>
