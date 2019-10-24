@@ -52,7 +52,7 @@ const EditModal = (props) => {
     }
     return (
         <form>
-            <ArtImage src={caseStudyImg1} />
+            <ArtImage src={newCase.imgURL} />
             <InputForm
                 name="title" 
                 type="text" 
