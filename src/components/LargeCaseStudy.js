@@ -1,26 +1,23 @@
+import React, { useState } from 'react';
+import { Card } from 'semantic-ui-react';
 
-  // import React, { useState } from 'react';
+const LargeCaseStudy = ({ data }) => {
+	console.log(data);
 
+	return (
+		<Card>
+			<div>
+				{/* <Image src={data.imgURL}/> */}
+				<h1>{data.artist}</h1>
+				<h2>Artist</h2>
+				<span />
+				<h2>Description</h2>
+				<p />><span />
+				<button>Cancel</button>
+				<button>Update Post</button>
+			</div>
+		</Card>
+	);
+};
 
-// const LargeCaseStudy = ( data, setData ) useState => {
-//         return 
-//             <Container>
-//                 <Image src={data.imgURL}/>
-//                 <h1>{data.author}</h1>
-//                 <h2>author</h2>
-//                 <h2>{data.likes}</h2>
-//                 <Title><span/></Title>
-//                 <Description><span/></Description>
-//                 <button>Cancel</button>
-//                 <button>Update Post</button>
-//             </Container>
-// }
-
-
-// export default LargeCaseStudy;
-   
-
-
-
-
-
+export default LargeCaseStudy;
