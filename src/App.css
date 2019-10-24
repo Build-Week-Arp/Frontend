@@ -192,8 +192,13 @@ html {
 	margin-right: 25px;
 	padding: 8px 20px;
 	border-radius: 25px;
+	border: none;
 	background: #d50071;
 	color: #fff;
+}
+
+.case-btn-1:focus {
+	outline: none;
 }
 
 .case-btn-2 {
@@ -201,7 +206,11 @@ html {
 	border-radius: 25px;
 	background: #fff;
 	color: #04082b;
-	border-color: #04082b;
+	border: 1px solid #04082b;
+}
+
+.case-btn-2:focus {
+	outline: none;
 }
 
 .extra.content {
