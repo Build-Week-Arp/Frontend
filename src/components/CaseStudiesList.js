@@ -49,7 +49,7 @@ const CaseStudiesList = ({ data }) => {
 				</nav>
 
 				<SmallCaseStudyContainer>
-					{data.caseStudies.map(() => {
+					{data.caseStudies.map((data) => {
 						return <SmallCaseStudy data={data} />;
 					})}
 				</SmallCaseStudyContainer>
