@@ -4,25 +4,46 @@ import { FaUserCircle } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
 
-
-const NavMenu = styled.nav`
-  text-align:center;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  background: #191512;
-`;
-
 const Container = styled.div`
   width: 300px;
   color: white;
 `;
 
-const IconContainer = styled.div`
-  color white;
-  font-size: 3rem;
+const NavMenu = styled.nav`
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  width: 7%;
+  background: #191512;
+  color: white;
+  position: absolute;
+  margin-top: 2%;
+  margin-right: 42%;
 `;
 
+const IconContainer = styled.div`
+  color white;
+  font-size: 3.3rem;
+  // position: absolute;
+`;
+
+const StyledLink = styled(
+  styled(NavLink)`
+    color: palevioletred;
+    display: block;
+    margin: 0.5em 0;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  `,
+  'active'
+)`
+  color: white;
+`;
 
 
 class DropDownMenu extends Component {
@@ -61,13 +82,10 @@ class DropDownMenu extends Component {
       
         <Container>
          <IconContainer>
-         <FaUserCircle onClick={this.showMenu}>
-          Show menu
-        </FaUserCircle> 
+          <FaUserCircle onClick={this.showMenu}>
+          </FaUserCircle> 
         </IconContainer>
-       
-        
-        
+
         {
           this.state.showMenu
             ? (
@@ -75,20 +93,20 @@ class DropDownMenu extends Component {
                 className="menu"
                 ref={(element) => {
                   this.dropdownMenu = element;
-                }}
-              >
+                }} >
+
                 <NavMenu>
-                <NavLink className="navLinks" to="#"> Profile </NavLink>
-                <NavLink className="navLinks" to="#"> Messages </NavLink>
-                <NavLink className="navLinks" to="#"> Settings </NavLink>
-                <NavLink className="navLinks" to="#"> Log Out </NavLink>
+                <StyledLink className="navLinks" to="/profile-page"> Profile </StyledLink>
+                <StyledLink className="navLinks" to="#"> Messages </StyledLink>
+                <StyledLink className="navLinks" to="#"> Settings </StyledLink>
+                <StyledLink className="navLinks" to="#"> Log Out </StyledLink>
                 </NavMenu>
-                
+
               </div>
-            )
+              )
             : (
               null
-            )
+              )
         }
       </Container>
     );
