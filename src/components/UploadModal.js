@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
+
+import img from '../images/Profile-background.jpg';
+import { connect } from 'react-redux';
+import { addCaseStudy } from '../actions';
 
 // styled components
 const ModalDiv = styled.div`
@@ -79,7 +83,27 @@ const ModalFormInput = styled.input`
 	background: transparent;
 `;
 
-const UploadModal = ({ handleClick }) => {
+const UploadModal = ({ handleClick, addCaseStudy }) => {
+	const [ addNewCase, setAddNewCase ] = useState({});
+
+	const handleChange = (e) => {
+		setAddNewCase({
+			...addNewCase,
+			title: e.target.value,
+			imgURL: img,
+			likes: 20,
+			views: 41,
+			id: Date.now()
+		});
+		console.log(addNewCase);
+	};
+
+	const addItem = (e) => {
+		e.preventDefault();
+		addCaseStudy(addNewCase);
+		handleClick();
+	};
+
 	return (
 		<div id="modal" className="upload-modal">
 			<ModalDiv>
@@ -91,9 +115,8 @@ const UploadModal = ({ handleClick }) => {
 
 					<ModalForm>
 						<label>Title</label>
-						<ModalFormInput />
+						<ModalFormInput onChange={handleChange} />
 						<label>Description</label>
-
 						<ModalFormInput />
 					</ModalForm>
 
@@ -101,7 +124,9 @@ const UploadModal = ({ handleClick }) => {
 						<ModalButton onClick={handleClick} className="btn-primary">
 							Cancel
 						</ModalButton>
-						<ModalButton className="btn-secondary">Create Post</ModalButton>
+						<ModalButton onClick={addItem} className="btn-secondary">
+							Create Post
+						</ModalButton>
 					</ModalButtonDiv>
 				</ModalChild>
 
@@ -111,4 +136,13 @@ const UploadModal = ({ handleClick }) => {
 	);
 };
 
-export default UploadModal;
+const mapStateToProps = (state) => {
+	return {
+		artist: state.artist,
+		isFetching: state.isFetching,
+		isPosting: state.isPosting,
+		error: state.error
+	};
+};
+
+export default connect(mapStateToProps, { addCaseStudy })(UploadModal);

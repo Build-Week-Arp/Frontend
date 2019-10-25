@@ -5,7 +5,6 @@ import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaEnvelopeSquare } fro
 const CardContainer = styled.div`
 	width: 300px;
 	height: 760px;
-	border: 1px solid gray;
 	-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
@@ -13,13 +12,12 @@ const CardContainer = styled.div`
 
 const TopPart = styled.div`
 	width: 300px;
-	height: 214px;
-	border-bottom: 1px solid gray;
 	background: transparent;
 	display: flex;
 	flex-direction: column;
 	margin: 5% auto;
 	text-align: center;
+	padding: 80px 0 10px;
 `;
 
 const CardImage = styled.img`
@@ -48,7 +46,11 @@ const FollowButton = styled.button`
 const MiddleParagraphs = styled.div`
 	width: 252px;
 	margin: 0 auto;
+	line-height: 15px;
+	font-size: 15px;
 `;
+
+const MiddleParagraphH2 = styled.h2`font-weight: 900;`;
 
 const BottomIcons = styled.div`margin: 20% auto;`;
 
@@ -71,12 +73,14 @@ export default function BioCard() {
 				<FollowButton>Follow</FollowButton>
 
 				<MiddleParagraphs className="middle-part">
-					<h3>About Me</h3>
+					<MiddleParagraphH2>About Me</MiddleParagraphH2>
+					<br />
 					<p>
 						It is a long established fact that a reader will be distracted by the readable content of a page
 						when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
 						distribution of letters, as opposed to using{' '}
 					</p>
+					<br />
 					<p>
 						There are many variations of passages of Lorem Ipsum available, but the majority have suffered
 						alteration in some form, by injected humour, or randomised words which don't look even slightly
