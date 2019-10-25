@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import bgImg from '../images/Profile-background.jpg';
 import { FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaEnvelopeSquare } from 'react-icons/fa';
 
 const CardContainer = styled.div`
@@ -11,11 +12,10 @@ const CardContainer = styled.div`
 `;
 
 const TopPart = styled.div`
+	background-image: url(${bgImg});
 	width: 300px;
-	background: transparent;
 	display: flex;
 	flex-direction: column;
-	margin: 5% auto;
 	text-align: center;
 	padding: 80px 0 10px;
 `;
@@ -50,6 +50,13 @@ const MiddleParagraphs = styled.div`
 	font-size: 15px;
 `;
 
+const ImageBio = styled.div`
+	width: 252px;
+	margin: 0 auto;
+	line-height: 15px;
+	font-size: 15px;
+`;
+
 const MiddleParagraphH2 = styled.h2`font-weight: 900;`;
 
 const BottomIcons = styled.div`margin: 20% auto;`;
@@ -62,12 +69,19 @@ export default function BioCard() {
 					className="card-avatar"
 					src="https://media.licdn.com/dms/image/C4D03AQGEyqn3rIlCRw/profile-displayphoto-shrink_200_200/0?e=1577318400&v=beta&t=zxpYoLRTOpEFal2OLx1lVshjXP5Tc2txps2DVGOXmFg"
 				/>
-				<h4>Leighton Fritze</h4>
-				<p>Full Stack Developer</p>
-				<small>
-					<span>Followers: 300</span>
-					<span> Following: 8</span>
-				</small>
+				<br />
+				<ImageBio>
+					<MiddleParagraphH2>Leighton Fritze</MiddleParagraphH2>
+					<br />
+
+					<p>Full Stack Developer</p>
+					<br />
+
+					<small>
+						<span>Followers: 300</span>
+						<span> Following: 8</span>
+					</small>
+				</ImageBio>
 			</TopPart>
 			<MiddleDiv>
 				<FollowButton>Follow</FollowButton>

@@ -21,7 +21,6 @@ const CaseStudiesContainer = styled.div`
 
 const ProfilePage = (props) => {
 
-	console.log(props)
 
 
 	return (

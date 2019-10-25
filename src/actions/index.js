@@ -6,6 +6,7 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAIL = 'FETCH_FAIL';
 export const UPDATE_CASE = 'UPDATE_CASE';
 export const ADD_CASE = 'ADD_CASE';
+export const DELETE_CASE = 'DELETE_CASE';
 
 // action creator that fetches Artist object from API
 export const fetchArtist = () => (dispatch) => {
@@ -32,6 +33,10 @@ export const updateCaseStudy = (caseStudy, id) => (dispatch) => {
 	});
 };
 
-export const addCaseStudy = (caseStudy, id) => (dispatch) => {
+export const addCaseStudy = (caseStudy) => (dispatch) => {
 	dispatch({ type: ADD_CASE, payload: caseStudy });
+};
+
+export const deleteCase = (caseStudy) => (dispatch) => {
+	return dispatch({ type: DELETE_CASE, payload: caseStudy });
 };
