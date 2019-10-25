@@ -95,7 +95,6 @@ const UploadModal = ({ handleClick, addCaseStudy }) => {
 			views: 41,
 			id: Date.now()
 		});
-		console.log(addNewCase);
 	};
 
 	const addItem = (e) => {

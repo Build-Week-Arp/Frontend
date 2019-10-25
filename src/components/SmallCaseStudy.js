@@ -1,42 +1,22 @@
-import React, { useState } from "react";
- 
-import {
-	CaseCard,
-	CaseImage,
-	CardBody,
-	CardTitle,
-	Subtitle,
-	CardFooter
-} from '../styling/SmallCaseStudyStyling';
- 
-const SmallCaseStudy = ({casestudy, artist, editStudy}) => {
-    
-    const [ isEditing, setisEditing ] = useState(false);
-    const handleClick = () => {
-        setisEditing(!isEditing);
-    };
- 
-    // if (isEditing) {
-        
-    //     return <LargeCaseStudy />;
- 
-    // } else {
-        
-        
-    return (
-        <CaseCard>
-            <CaseImage src={casestudy.imgURL}/>
+import React, { useState } from 'react';
+
+import { CaseCard, CaseImage, CardBody, CardTitle, Subtitle, CardFooter } from '../styling/SmallCaseStudyStyling';
+
+const SmallCaseStudy = ({ casestudy, artist, editStudy }) => {
+	return (
+		<CaseCard>
+			<CaseImage src={casestudy.imgURL} />
 			<CardBody>
 				<CardTitle>{casestudy.title}</CardTitle>
-				<Subtitle>by {artist}</Subtitle>             
+				<Subtitle>by {artist}</Subtitle>
 			</CardBody>
 			<CardFooter>
 				<h2>Likes: {casestudy.likes}</h2>
 				<h2>Views: {casestudy.views}</h2>
 				<button onClick={() => editStudy(casestudy.id)}>Edit</button>
 			</CardFooter>
-        </CaseCard>
-	)
-}
+		</CaseCard>
+	);
+};
 
 export default SmallCaseStudy;

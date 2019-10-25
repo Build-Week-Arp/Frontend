@@ -1,4 +1,4 @@
-import { START_FETCHING, FETCH_SUCCESS, FETCH_FAIL, UPDATE_CASE, ADD_CASE } from '../actions';
+import { START_FETCHING, FETCH_SUCCESS, FETCH_FAIL, UPDATE_CASE, ADD_CASE, DELETE_CASE } from '../actions';
 
 import caseStudyImg1 from '../images/caseStudyImg1.jpg';
 import caseStudyImg2 from '../images/caseStudyImg2.png';
@@ -134,8 +134,17 @@ const reducer = (state = initialState, action) => {
 				}
 			};
 
+		case DELETE_CASE:
+			return {
+				...state,
+				artist: {
+					...state.artist,
+					// filtering the casestudies and looking at the id then comparing it to the payload id and if they match it removes that casestudy from the array.
+					caseStudies: state.artist.caseStudies.filter((caseStudy) => caseStudy.id !== action.payload.id)
+				}
+			};
+
 		default:
-			console.log('hello');
 			return state;
 	}
 };
